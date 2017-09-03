@@ -76,7 +76,9 @@ metadata {
 		standardTile("refresh", "device.lock", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
 			state "default", label:'', action:"refresh.refresh", icon:"st.secondary.refresh"
 		}
-
+		standardTile("Codes", "device.getAllCodes", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
+			state "default", label:'', action:"getAllCodes.getAllCodes", icon:"st.secondary.refresh"
+		}
 		main "toggle"
 		details(["toggle", "lock", "unlock", "battery", "refresh"])
 	}
