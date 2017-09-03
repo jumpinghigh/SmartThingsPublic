@@ -43,7 +43,7 @@ metadata {
 		fingerprint mfr:"0129", prod:"0004", model:"0800", deviceJoinName: "Yale Push Button Deadbolt Door Lock" // YRD110
 		fingerprint mfr:"0129", prod:"0004", model:"0000", deviceJoinName: "Yale Push Button Deadbolt Door Lock" // YRD210
 		fingerprint mfr:"0129", prod:"0001", model:"0000", deviceJoinName: "Yale Push Button Lever Door Lock" // YRD210
-		fingerprint mfr:"0129", prod:"8002", model:"0600", deviceJoinName: "Yale Assure Lock with Bluetooth"
+		fingerprint mfr:"0129", prod:"8002", model:"0600", deviceJoinName: "Yale Assure Lock Chris"
 	}
 
 	simulator {
@@ -76,8 +76,8 @@ metadata {
 		standardTile("refresh", "device.lock", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
 			state "default", label:'', action:"refresh.refresh", icon:"st.secondary.refresh"
 		}
-		standardTile("Codes", "device.getAllCodes", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
-			state "default", label:'', action:"getAllCodes.getAllCodes", icon:"st.secondary.refresh"
+		standardTile("codes", "device.getAllCodes", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
+			state "default", label:'code', action:"getAllCodes.getAllCodes", icon:"st.secondary.refresh"
 		}
 		main "toggle"
 		details(["toggle", "lock", "unlock", "battery", "refresh"])
